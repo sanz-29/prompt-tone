@@ -1,4 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-  <rect width="48" height="48" rx="8" fill="#0b66ff" />
-  <text x="24" y="30" font-size="18" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">PO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+  <defs>
+    <linearGradient id="grad48" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow48">
+      <feGaussianBlur stdDeviation="0.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background with gradient and rounded corners -->
+  <rect width="48" height="48" fill="url(#grad48)" rx="8"/>
+  
+  <!-- Chat bubble -->
+  <path d="M 8 10 Q 8 6 12 6 L 32 6 Q 36 6 36 10 L 36 26 Q 36 30 32 30 L 14 30 L 10 34 L 12 30 L 12 30 Q 8 30 8 26 Z" fill="white"/>
+  
+  <!-- Magic wand -->
+  <g transform="translate(22, 12)">
+    <!-- Wand stick -->
+    <line x1="0" y1="12" x2="8" y2="4" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Wand tip star -->
+    <g fill="white" transform="translate(8, 4)">
+      <circle cx="0" cy="0" r="1.2"/>
+    </g>
+  </g>
+  
+  <!-- Sparkles -->
+  <g filter="url(#glow48)">
+    <!-- Sparkle 1 (top right) -->
+    <g fill="#FFD700">
+      <circle cx="38" cy="8" r="2.5"/>
+      <path d="M 38 5 L 39.2 7 L 41.2 7 L 39.6 8.4 L 40.8 10 L 38 8.6 L 35.2 10 L 36.4 8.4 L 34.8 7 L 36.8 7 Z" fill="#FFD700"/>
+    </g>
+    <!-- Sparkle 2 (bottom right) -->
+    <g fill="#FFC107">
+      <circle cx="40" cy="26" r="1.8"/>
+      <path d="M 40 24 L 40.8 25.2 L 42 25.2 L 41.2 25.8 L 42 27 L 40 26.4 L 38 27 L 38.8 25.8 L 38 25.2 L 39.2 25.2 Z" fill="#FFC107"/>
+    </g>
+  </g>
 </svg>

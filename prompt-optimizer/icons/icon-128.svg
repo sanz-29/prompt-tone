@@ -1,4 +1,84 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
-  <rect width="128" height="128" rx="20" fill="#0b66ff" />
-  <text x="64" y="80" font-size="48" text-anchor="middle" fill="white" font-family="Arial, Helvetica, sans-serif">PO</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="grad128" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#c084fc;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#a855f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow128">
+      <feGaussianBlur stdDeviation="1.2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="shadow128">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background with gradient and rounded corners -->
+  <rect width="128" height="128" fill="url(#grad128)" rx="20"/>
+  
+  <!-- Subtle shadow overlay -->
+  <rect width="128" height="128" fill="rgba(0,0,0,0.05)" rx="20"/>
+  
+  <!-- Chat bubble with shadow -->
+  <g filter="url(#shadow128)">
+    <path d="M 20 26 Q 20 16 30 16 L 86 16 Q 96 16 96 26 L 96 72 Q 96 82 86 82 L 36 82 L 24 94 L 32 82 L 32 82 Q 22 82 22 72 L 22 26 Z" fill="white"/>
+  </g>
+  
+  <!-- Chat bubble inner highlight for depth -->
+  <path d="M 24 26 Q 24 20 30 20 L 86 20 Q 92 20 92 26 L 92 72 Q 92 78 86 78 L 36 78 L 26 88 L 32 78 L 32 78 Q 26 78 26 72 L 26 26 Z" fill="white" opacity="0.3"/>
+  
+  <!-- Magic wand -->
+  <g transform="translate(58, 30)">
+    <!-- Wand stick with gradient effect -->
+    <defs>
+      <linearGradient id="wandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+        <stop offset="100%" style="stop-color:#f0f0f0;stop-opacity:1" />
+      </linearGradient>
+    </defs>
+    <line x1="0" y1="28" x2="18" y2="10" stroke="url(#wandGrad)" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Wand tip sphere -->
+    <circle cx="18" cy="10" r="5" fill="white"/>
+    <circle cx="18" cy="10" r="4.5" fill="url(#grad128)"/>
+    <circle cx="16" cy="8" r="1.5" fill="white" opacity="0.6"/>
+    
+    <!-- Sparkle rays from tip -->
+    <g stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.8">
+      <line x1="18" y1="0" x2="18" y2="-4"/>
+      <line x1="18" y1="20" x2="18" y2="24"/>
+      <line x1="8" y1="10" x2="4" y2="10"/>
+      <line x1="28" y1="10" x2="32" y2="10"/>
+    </g>
+  </g>
+  
+  <!-- Large sparkle effect (top right) -->
+  <g filter="url(#glow128)" transform="translate(100, 12)">
+    <!-- Main star -->
+    <g fill="#FFD700">
+      <path d="M 0 -8 L 1.5 -2.5 L 8 -1 L 3 3.5 L 4.5 10 L 0 5.5 L -4.5 10 L -3 3.5 L -8 -1 L -1.5 -2.5 Z" fill="#FFD700"/>
+      <!-- Star glow -->
+      <path d="M 0 -8 L 1.5 -2.5 L 8 -1 L 3 3.5 L 4.5 10 L 0 5.5 L -4.5 10 L -3 3.5 L -8 -1 L -1.5 -2.5 Z" fill="#FFD700" opacity="0.3" r="12"/>
+    </g>
+  </g>
+  
+  <!-- Medium sparkle effect (bottom right) -->
+  <g filter="url(#glow128)" transform="translate(108, 88)">
+    <g fill="#FFC107">
+      <path d="M 0 -6 L 1.2 -2 L 6 -1 L 2.5 2.5 L 3.5 7.5 L 0 4 L -3.5 7.5 L -2.5 2.5 L -6 -1 L -1.2 -2 Z" fill="#FFC107"/>
+      <path d="M 0 -6 L 1.2 -2 L 6 -1 L 2.5 2.5 L 3.5 7.5 L 0 4 L -3.5 7.5 L -2.5 2.5 L -6 -1 L -1.2 -2 Z" fill="#FFC107" opacity="0.3"/>
+    </g>
+  </g>
+  
+  <!-- Small sparkle effect (middle bottom) -->
+  <g filter="url(#glow128)" transform="translate(52, 110)">
+    <g fill="#FFD700">
+      <circle cx="0" cy="0" r="3"/>
+      <path d="M 0 -4 L 0.8 -1.5 L 3.5 -1 L 1.5 1 L 2 3.5 L 0 2 L -2 3.5 L -1.5 1 L -3.5 -1 L -0.8 -1.5 Z" fill="#FFD700" opacity="0.7"/>
+    </g>
+  </g>
 </svg>

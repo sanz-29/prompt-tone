@@ -1,11 +1,24 @@
 # Prompt Optimizer
 
-One-click Firefox extension to optimize prompts on ChatGPT, Gemini, and Claude.
+A lightweight Firefox extension that optimizes prompts for AI platforms such as ChatGPT, Gemini, and Claude with a single click.
 
-Testing locally:
-1. Open `about:debugging#/runtime/this-firefox` in Firefox.
-2. Click "Load Temporary Add-on" and select the `manifest.json` file inside the `prompt-optimizer` folder.
-3. Open one of the supported sites, type a prompt, open the extension popup, and click "Optimize Prompt".
+## Features
+- One-click prompt optimization
+- Works on multiple AI websites
+- Lightweight and privacy-focused
 
-Packaging:
-1. Zip the `prompt-optimizer` folder contents (manifest at root) and upload to https://addons.mozilla.org/ for review.
+## Tech Stack
+- JavaScript
+- HTML
+- CSS
+- Firefox Manifest V3
+
+## Installation
+1. Clone the repository.
+2. Open Firefox.
+3. Navigate to `about:debugging`.
+4. Click `Load Temporary Add-on`.
+5. Select `manifest.json`.
+
+## License
+No 
