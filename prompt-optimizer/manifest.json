@@ -3,29 +3,38 @@
   "name": "PromptTone",
   "version": "1.0.0",
   "description": "One-click prompt optimization for ChatGPT, Gemini, and Claude.",
+
   "icons": {
     "16": "icons/icon-16.svg",
     "48": "icons/icon-48.svg",
     "128": "icons/icon-128.svg"
   },
+
   "permissions": ["storage"],
+
   "host_permissions": [
     "*://chat.openai.com/*",
     "*://chatgpt.com/*",
     "*://gemini.google.com/*",
     "*://claude.ai/*"
   ],
+
   "browser_specific_settings": {
-  "gecko": {
-    "id": "prompttone@sanjay.dev"
+    "gecko": {
+      "id": "prompttone@sanjay.dev"
     }
   },
-  
-  
+
+  "data_collection_permissions": {
+    "required": [],
+    "optional": []
+  },
+
   "action": {
     "default_title": "Optimize Prompt",
     "default_popup": "popup.html"
   },
+
   "content_scripts": [
     {
       "matches": [
